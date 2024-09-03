@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sizing.css">
+    <link rel="stylesheet" href="css/buttons_and_links.css">
+    <title>Chris' Portfolio</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Welcome to my portfolio!</h2>
+            <p>I'm a software developer with a variety of experience in both front-end and back-end technologies looking to break into my first role in a team I can learn and grow with!</p>
+        </section>
+        <div class="flex-wrap-container">
+            <section class="flex-wrap-item">
+                <h2>About Me</h2>
+                <div class="flex-wrap-container">
+                    <figure class="flex-wrap-item">
+                        <img src="assets/me.jpg" alt="A picture of me">
+                        <figcaption>^ me</figcaption>
+                    </figure>
+                    <article class="flex-wrap-item">
+                        <p>I am based out of New York and am amenable to in-person, remote or flex offers. Learning new systems and creating effective solutions is very rewarding for me, so I'm excited for what comes next in my career.
+                        </p>
+                        <br>
+                        <p>My main interests are programming, writing, music, tabletop rpgs, video games, gardening and language learning. </p>
+                    </article>
+                </div>
+            </section>
+            <section class="flex-wrap-item">
+                <h2>Skills</h2>
+                <article class="container">
+                    <div>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Flask</li>
+                            <li>Node</li>
+                            <li>Express</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>SQLalchemy</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
+        
+        <section>
+            <h2>Projects</h2>
+            <div class="flex-wrap-container">
+                <article class="flex-wrap-item">
+                    <h3>E-Commerce API</h3>
+                    <p>This is a flask application that uses SQLalchemy to streamline and simplify interaction with an e-commerce database which it creates. It has endpoints that allow for full CRUD and automatically creates the tables it needs provided the database exists. <br><br>As a note for it's functionality, it does utilize cascade deletion to prevent data integrity errors with orphaned entries in the tables. So, deleting a customer will delete their account, orders, and entries on the order_product table. It will not, however, delete references to deleted products in orders when a product is deleted.</p>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <p class="flex-wrap-item">Python</p>
+                        <p class="flex-wrap-item">Flask</p>
+                        <p class="flex-wrap-item">MySQL</p>
+                        <p class="flex-wrap-item">SQLalchemy</p>
+                        <p class="flex-wrap-item">Marshmallow</p>
+                        <p class="flex-wrap-item">Postman</p>
+                    </div>
+                    <hr>
+                    <a href="https://github.com/windikite/MP5-E-CommerceAPI"><button><strong>GitHub</strong></button></a>
+                </article>
+                <article class="flex-wrap-item">
+                    <h3>Fitness Center API</h3>
+                    <p>This is a flask application that uses SQLalchemy to streamline and simplify interaction with a fitness database which it creates. This is the same database I used in earlier projects, just refined. It has endpoints that allow for full CRUD and automatically creates the tables it needs provided the database exists. <br><br>As a note for it's functionality, it will create the tables using ondelete='Cascade' on the foreign key "member_id" on workout_sessions, so that when a member is deleted the database itself will delete any would-be lingering entries.</p>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <p class="flex-wrap-item">Python</p>
+                        <p class="flex-wrap-item">Flask</p>
+                        <p class="flex-wrap-item">MySQL</p>
+                        <p class="flex-wrap-item">SQLalchemy</p>
+                        <p class="flex-wrap-item">Marshmallow</p>
+                        <p class="flex-wrap-item">Postman</p>
+                    </div>
+                    <hr>
+                    <a href="https://github.com/windikite/Flask-SQLAlchemyFitnessCenterManagement"><button><strong>GitHub</strong></button></a>
+                </article>
+                <article class="flex-wrap-item">
+                    <h3>FFXIV Gearset Manager</h3>
+                    <img src="/assets/FFXIVGearsetManager.png" alt="A picture of my ff14 gearset manager">
+                    <p>Groups of players in the MMORPG FFXIV normally use spreadsheets to manually track and coordinate the sets of equipment needed among the group. I developed this application to expedite the process, automatically calculating the resources required to acquire those sets for each person. <br><br>Users can input a link from the popular equipment selector Etro.gg, which will be used via API call to fetch data directly from Etro. The data is checked against an internal dataset to determine the currencies or items needed for the entire set. Finally, relevant information is provided to the user based on the fetched data for the set’s statistics, as well as the ‘shopping list’ my site generates.</p>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <p class="flex-wrap-item">JavaScript</p>
+                        <p class="flex-wrap-item">React</p>
+                        <p class="flex-wrap-item">Bootstrap</p>
+                    </div>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <a href="https://ffxiv-gearset-manager.onrender.com/"  class="flex-wrap-item"><button><strong>Site</strong></button></a>
+                        <a href="https://github.com/windikite/FFXIV-Gearset-Manager"  class="flex-wrap-item"><button><strong>GitHub</strong></button></a>
+                    </div>
+                </article>
+                <article class="flex-wrap-item">
+                    <h3>D&D 3.5 Character Creator</h3>
+                    <img src="/assets/DNDCharCreator.png" alt="A picture of my dnd character creator">
+                    <p>For Dungeons and Dragons character creators specific to the 3.5th edition, the options are either very basic and only cover the core rulebook, or extremely expansive but unwieldy to use with no explanation of the available options presented. <br><br>I developed this application specifically to provide an alternative; one that could easily have its dataset expanded to cover all desired material, but be displayed and interacted with in a modern framework. Users can currently complete the beginning steps of character creation and have their choices be reflected in an information pane above, compiling useful information for their convenience.</p>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <p class="flex-wrap-item">JavaScript</p>
+                        <p class="flex-wrap-item">React</p>
+                        <p class="flex-wrap-item">Bootstrap</p>
+                    </div>
+                    <hr>
+                    <div class="flex-wrap-container">
+                        <a href="https://dnd-3-5-character-creator.onrender.com/"  class="flex-wrap-item"><button><strong>Site</strong></button></a>
+                        <a href="https://github.com/windikite/DnD-3.5-Character-Creator"  class="flex-wrap-item"><button><strong>GitHub</strong></button></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Contact</h2>
+            <div class="container">
+                <div class="card">
+                    <p>Thanks for reaching the end of my portfolio! Questions or opportunities? Contact me on Github, LinkedIn, or enter your email address and message here!</p>
+                    <div id="contact-links" class="container">
+                        <a href="https://github.com/windikite"><button><strong>GitHub</strong></button></a>
+                        <a href="www.linkedin.com/in/christopher-james-craig"><button><strong>LinkedIn</strong></button></a>
+                    </div>
+                    <p><strong>Email: </strong>Windikite@yahoo.com</p>
+                </div>
+                <div class="card">
+                    <div id="email-form">
+                        <p>Enter your email to get in contact!</p>
+                        <form action="/">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com"> 
+                            <br>
+                            <textarea></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

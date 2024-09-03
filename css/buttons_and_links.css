@@ -1,0 +1,59 @@
+input[type=submit] {
+    width: 100%;
+    max-width: 300px;
+    background-color: #e0dad5;
+}
+
+input[type=email] {
+    width: 81%;
+    max-width: 255px;
+}
+
+button {
+    color: #2b2a28;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    border: solid #32cfb4;
+    animation: unhovered 1.0s;
+    animation-fill-mode: forwards;
+}
+
+button:hover {
+    animation: color-hover .5s;
+    animation-fill-mode: forwards;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type=submit]:hover {
+    background-color:#32cfb4;
+}
+
+@keyframes color-hover {
+    from {
+        color:#2b2a28;
+        background-color: #e0dad5;
+        border: solid #32cfb4;
+    }
+    to {
+        color:#32cfb4;
+        background-color: #2b2a28;
+        border: solid #e0dad5;
+    }
+}
+
+@keyframes unhovered {
+    from {
+        color:#32cfb4;
+        background-color: #2b2a28;
+        border: solid #e0dad5;
+    }
+    to {
+        color:#2b2a28;
+        background-color: #e0dad5;
+        border: solid #32cfb4;
+    }
+}
